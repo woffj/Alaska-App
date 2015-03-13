@@ -1,0 +1,20 @@
+<img src="../images/hotel-banner.jpg">
+<main>
+    <div class="display-menu" ng-repeat="hotel in hotels">
+    	<table border="0" width="100%">
+    		<tr>
+    			<td><img src="{{ hotel.image_url }}"></td>
+    			<td><h5><strong>{{ hotel.name }}</strong></h5><p> {{ hotel.display_phone }} </p></td>
+    		</tr>
+    	</table>
+    	<p> {{ hotel.snippet_text}}</p>
+    	<table border="0" width="100%">
+    		<tr>
+    			<td>Rating: {{ hotel.rating }}</td>
+    			<td>Reviews: {{ hotel.review_count }} </td>
+    			<td><img src="{{ hotel.rating_img_url_small }}"></td>
+    		</tr>
+    	</table>
+    </div>
+        
+</main>

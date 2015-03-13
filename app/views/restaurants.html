@@ -1,0 +1,22 @@
+<div ng-controller="HeaderCtrl"> 
+        <img ng-src="images/search/{{ banner }}.jpg"></img>
+</div>
+<main>
+    <div class="display-menu" ng-repeat="result in yelpResults">
+    	<table border="0" width="100%">
+    		<tr>
+    			<td><img src="{{ result.image_url }}"></td>
+    			<td><h5><strong>{{ result.name }}</strong></h5><p> {{ result.display_phone }} </p></td>
+    		</tr>
+    	</table>
+    	<p> {{ result.snippet_text}}</p>
+    	<table border="0" width="100%">
+    		<tr>
+    			<td>Rating: {{ result.rating }}</td>
+    			<td>Reviews: {{ result.review_count }} </td>
+    			<td><img src="{{ result.rating_img_url_small }}"></td>
+    		</tr>
+    	</table>
+    </div>
+        
+</main>

@@ -1,0 +1,102 @@
+/* all app scss styles here */
+
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/box-shadow";
+@import "flexbox";
+
+
+body {
+	background-image: url(../images/Alaska-maritime-map.jpg);
+	background-size: cover;
+	background-repeat: none;
+}
+.border-bottom {
+	border-bottom: 2px solid $primary-color;
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+	background-image: url(../images/overlay.png);
+	background-repeat: repeat;
+	@include box-shadow(black 2px 2px 10px);
+}
+header {
+	padding: 0;
+	margin: 0;
+	.nav-menu {
+		width: 100%;
+		float: right;
+		color: $primary-color;
+		font-size: 3em;
+		font-family: $font-family-google;
+	}
+	.nav-menu ul li {
+		padding: 5px 20px;
+		list-style: none;
+		display: inline-block;
+	}
+	.nav-menu a {
+		text-decoration: none;
+		color: $primary-color;
+	}
+	.nav-menu a:link {
+		text-decoration: none;
+	}
+	.nav-menu a:hover, a:active {
+		text-decoration: underline;
+	}
+	.logo {
+		display: block;
+	}
+}
+.clearfix {
+	width: 100%;
+	clear: both;
+	display: block;
+}
+main {
+	padding: 20px;
+	.button-menu {
+		display: inline-block;
+		width: 30%;
+		height: 30%;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		background-color: $white;
+		padding: 20px;
+		@include box-shadow(black 1px 1px 3px);
+		border: thin solid #efefef;
+		font-family: $font-family-google;
+		text-align: center;
+		color: $primary-color;
+	}
+	.button-menu h3 {
+		margin: 13px 0 0;
+	}
+	.display-menu {
+		display: inline-block;
+		width: 47%;
+		height: auto;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		background-color: $white;
+		padding: 20px;
+		@include box-shadow(black 1px 1px 3px);
+		border: thin solid #efefef;
+		font-family: $font-family-sans-serif;
+		text-align: left;
+	}
+}
+
+$break-small: 650px;
+$break-large: 1200px;
+
+@media screen and (max-width: $break-small) {
+	.display-menu {
+		display: block;
+		width: 100%;
+		border-bottom: 2px solid $primary-color;
+	}
+}
+
